@@ -4,7 +4,6 @@ author = "username"
 locale = "en"
 DefaultContentLanguage = "en"
 enableInlineShortcodes = true
-theme = "tella"
 enableRobotsTXT = true
 
 # Please enable this feature if the site is available in Japanese, Chinese or Korean.
@@ -25,7 +24,7 @@ googleFonts = true
 
   # The size parameter is the class name of tailwindcss
   # https://tailwindcss.com/
-  size = "h-14"
+  size = "h-12"
 
   [params.site]
   name = "PraNet"
@@ -106,3 +105,4 @@ googleFonts = true
   [markup.goldmark]
     [markup.goldmark.renderer]
     unsafe = true
+

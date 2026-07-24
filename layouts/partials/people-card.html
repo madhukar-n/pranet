@@ -1,0 +1,36 @@
+<div class="people-card">
+  {{ if .Params.image }}
+    {{ $image := .Resources.GetMatch .Params.image }}
+    <div class="people-image">
+      {{ if $image }}
+        <img src="{{ $image.RelPermalink }}" alt="{{ .Title }}" loading="lazy">
+      {{ else }}
+        <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" loading="lazy">
+      {{ end }}
+    </div>
+  {{ end }}
+  <div class="people-info">
+    <h4 class="people-name">{{ .Title }}</h4>
+    {{ if .Params.position }}
+      <p class="people-position">{{ .Params.position }}</p>
+    {{ end }}
+    <div class="people-links">
+      {{ if .Params.email }}
+        <a href="mailto:{{ .Params.email }}" title="Email" class="people-link">
+          <i class="bi bi-envelope"></i>
+        </a>
+      {{ end }}
+      {{ if .Params.website }}
+        <a href="{{ .Params.website }}" target="_blank" rel="noopener noreferrer" title="Website" class="people-link">
+          <i class="bi bi-globe"></i>
+        </a>
+      {{ end }}
+      {{ if .Params.phone }}
+        <a href="tel:{{ .Params.phone }}" title="Phone" class="people-link">
+          <i class="bi bi-telephone"></i>
+        </a>
+      {{ end }}
+    </div>
+    
+  </div>
+</div>

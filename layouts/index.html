@@ -11,12 +11,11 @@
 {{ end }}
 
 {{ define "main" }}
-    {{- partial "alert.html" . -}}
     {{- partial "slide.html" . -}}
     {{- partial "strip.html" . -}}
     {{ if ne .Site.Params.showNews false }}
     <div class="mx-auto my-10 max-w-6xl px-4">
-        <h2 class="text-4xl mb-6 font-bold">News</h2>
+        <h2 class="text-4xl mb-6 font-bold">Recent updates</h2>
         {{- partial "recent.html" . -}}
     </div>
     {{ end }}

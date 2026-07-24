@@ -4,9 +4,8 @@ role = 'PhD'  # Options: Professor, PhD, MTech RA, MTech TA
 position = 'PhD Researcher'
 date = {{ .Date }}
 draft = false
-image = 'images/person.jpg'
+image = 'person.jpg'
 email = 'email@example.com'
-# phone = '+XX-XX-XXXX-XXXX'  # Optional
 # website = 'https://example.com'  # Optional
 +++
 
