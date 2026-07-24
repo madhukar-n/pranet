@@ -10,6 +10,10 @@ enableRobotsTXT = true
 # Please enable this feature if the site is available in Japanese, Chinese or Korean.
 #hasCJKLanguage = true
 
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
+
 [params]
 showNews = true
 mainSections = ['News']
