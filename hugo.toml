@@ -1,3 +1,104 @@
-baseURL = 'https://example.org/'
-locale = 'en-us'
-title = 'My New Hugo Project'
+baseURL = "https://example.com"
+title = "Practical Networking & Blockchain Lab"
+author = "username"
+locale = "en"
+DefaultContentLanguage = "en"
+enableInlineShortcodes = true
+theme = "tella"
+enableRobotsTXT = true
+
+# Please enable this feature if the site is available in Japanese, Chinese or Korean.
+#hasCJKLanguage = true
+
+[params]
+showNews = true
+mainSections = ['News']
+googleFonts = true
+
+  [params.logo]
+  main = "img/logo/logo.svg" #Change this once we have a Logo
+  alt = "PraNet"
+
+  # The size parameter is the class name of tailwindcss
+  # https://tailwindcss.com/
+  size = "h-14"
+
+  [params.site]
+  name = "PraNet"
+
+  [params.icon]
+  # If you want to use FontAwesome, set this parameter to true.
+  #fontawesome = true
+
+  # You can also use Bootstrap Icons.
+  bootstrap = true
+
+  [params.share]
+  # If you want to use share buttons, set this parameter to true.
+  enable = true
+  # Uncomment and edit to limit which services are shown
+  # services = ["twitter", "mastodon", "facebook", "line", "linkedin", "whatsapp", "mail", "copy"]
+
+  [params.homepage_meta_tags]
+  meta_description = "Network and Blockchain research lab at IITH"
+  meta_og_title = "PraNet"
+  meta_og_type = "website"
+  
+
+  [params.giscus]
+  # Giscus Comment System
+  # See https://giscus.app for setup instructions
+  #repo = "your-repo"
+  #repo_id = "your-repo-id"
+  #category = "Announcements"
+  #category_id = "your-category-id"
+  #mapping = "pathname"
+  #strict = "0"
+  #reactions_enabled = "1"
+  #emit_metadata = "0"
+  #input_position = "bottom"
+  #theme = "preferred_color_scheme"
+  #lang = "en"
+  #loading = "lazy"
+
+[menu]
+  [[menu.main]]
+  identifier = "people"
+  name = "People"
+  url = "/people/"
+  weight = 2
+
+  [[menu.main]]
+  identifier = "research"
+  name = "Research"
+  url = "/research/"
+  weight = 1
+
+  [[menu.main]]
+  identifier = "pubs"
+  name = "Publications"
+  url = "/publications/"
+  weight = 3
+
+  [[menu.main]]
+  identifier = "contact"
+  name = "Contact"
+  url = "/contact/"
+  weight = 4
+
+  # Footer Menu
+  [[menu.footer]]
+  name = "Home"
+  url = "/"
+  weight = 1
+
+  [[menu.footer]]
+  name = "CSE Dept"
+  url = "https://cse.iith.ac.in"
+  #pre = "<i class='bi bi-github text-2xl'></i>"
+  weight = 2
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+    unsafe = true
