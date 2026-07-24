@@ -3,7 +3,7 @@
         <ul class="splide__list">
                 {{ range hugo.Data.slide.slide }}
                 <li class="splide__slide">
-                    <img src="{{ .image }}" alt="{{ .alt }}">
+                    <img src="{{ .image | relURL }}" alt="{{ .alt }}">
                     <div class="s-fade-txt">
                         <h1 class="text-4xl font-medium {{ or .color "text-white" }}">{{ .title }}</h1>
                     </div>

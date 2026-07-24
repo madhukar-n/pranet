@@ -38,7 +38,11 @@
       </div>
       <div class="flex flex-row items-center text-lg">
         {{ range .Site.Menus.footer }}
-        <a href="{{ .URL }}" class="block mt-4 lg:inline-block lg:mt-0 text-gray-300 hover:text-white mr-8">
+        {{ if or (hasPrefix .URL "http://") (hasPrefix .URL "https://") }}
+        <a href="{{ .URL | safeURL }}" class="block mt-4 lg:inline-block lg:mt-0 text-gray-300 hover:text-white mr-8">
+        {{ else }}
+        <a href="{{ .URL | relLangURL }}" class="block mt-4 lg:inline-block lg:mt-0 text-gray-300 hover:text-white mr-8">
+        {{ end }}
           {{ if not .Pre }}
           {{ .Name }}
           {{ else }}
