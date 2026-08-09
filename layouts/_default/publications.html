@@ -1,0 +1,101 @@
+{{ define "meta_tags" }}
+
+<meta property="og:site_name" content="{{ .Site.Title }}" />
+<meta property="og:title" content="{{ .Title }} | {{ .Site.Title }}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta name="twitter:card" content="summary_large_image">
+<meta property="twitter:title" content="{{ .Title }}">
+
+{{ if .Params.image }}
+{{ with .Params.image }}
+<meta property="og:image" content="{{ . | absURL }}">
+{{ end }}
+{{ else }}
+<meta property="og:image" content="{{ .Site.Params.homepage_meta_tags.meta_og_image | absURL }}">
+{{ end }}
+
+{{- if .Description }}
+<meta name="description" content="{{ .Description }}" />
+<meta property="og:description" content="{{ .Description }}" />
+<meta property="twitter:description" content="{{ .Description }}" />
+{{- else if .Summary }}
+<meta name="description" content="{{ .Summary }}" />
+<meta property="og:description" content="{{ .Summary }}" />
+<meta property="twitter:description" content="{{ .Summary }}" />
+{{- else if .Site.Params.description }}
+<meta name="description" content="{{ .Site.Params.description }}" />
+<meta property="og:description" content="{{ .Site.Params.description }}" />
+<meta property="twitter:description" content="{{ .Site.Params.description }}" />
+{{- end }}
+
+{{ end }}
+
+{{ define "main" }}
+{{ $entries := hugo.Data.publications.publications | default slice }}
+{{ $publications := sort $entries "year" "desc" }}
+
+<div class="mx-auto mt-6 mb-10 max-w-7xl px-4 sm:px-6 lg:px-8">
+  <section class="px-6 py-6 md:px-10 md:py-10">
+    <h1 class="section-title mt-2 text-4xl md:text-5xl">{{ .Title }}</h1>
+    <div class="content prose prose-lg mt-5 max-w-none">
+      {{ .Content }}
+    </div>
+
+    {{ if gt (len $publications) 0 }}
+    <ol class="mt-8">
+      {{ range $publications }}
+      <li class="border-b border-slate-200 py-4 last:border-b-0">
+        <div class="flex flex-col gap-1.5">
+          <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+            <h2 class="text-lg font-semibold tracking-tight text-slate-950 md:text-xl">
+              {{ if .title }}
+              {{ .title }}
+              {{ else if .Title }}
+              {{ .Title }}
+              {{ end }}
+            </h2>
+          </div>
+
+          {{ with .authors }}
+          <p class="text-sm leading-6 text-slate-600 md:text-[0.95rem]">
+            <span class="font-semibold text-slate-900">Authors:</span> {{ . }}
+          </p>
+          {{ end }}
+
+          <p class="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm leading-6 text-slate-600 md:text-[0.95rem]">
+            {{ with .venue }}
+            <span class="inline-flex items-center gap-x-1.5"><span class="font-semibold text-slate-900">Venue:</span><span>{{ . }}</span></span>
+            {{ end }}
+
+            {{ with .year }}
+            <span class="text-slate-300">•</span>
+            <span class="inline-flex items-center gap-x-1.5"><span class="font-semibold text-slate-900">Year:</span><span>{{ . }}</span></span>
+            {{ end }}
+
+            {{ with .doi }}
+            <span class="text-slate-300">•</span>
+            <span class="inline-flex items-center gap-x-1.5">
+              <span class="font-semibold text-slate-900">DOI:</span>
+              {{ $doi := . }}
+              {{ if not (hasPrefix $doi "http://") }}
+              {{ if not (hasPrefix $doi "https://") }}
+              {{ $doi = printf "https://%s" $doi }}
+              {{ end }}
+              {{ end }}
+              <a href="{{ $doi }}" target="_blank" rel="noopener" class="font-medium text-blue-700 hover:text-blue-900">Open link</a>
+            </span>
+            {{ end }}
+          </p>
+        </div>
+      </li>
+      {{ end }}
+    </ol>
+    {{ else }}
+    <div class="mt-10 rounded-[1.25rem] border border-dashed border-slate-300 bg-slate-50 p-6 text-slate-600">
+      Add entries to <code>data/publications.toml</code> using <code>title</code>, <code>authors</code>, <code>venue</code>, <code>year</code>, and <code>doi</code>.
+    </div>
+    {{ end }}
+  </section>
+</div>
+{{ end }}

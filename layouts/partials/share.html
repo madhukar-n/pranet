@@ -1,9 +1,7 @@
 {{ if .Site.Params.share.enable }} {{ $services := default (slice "twitter"
 "facebook" "line" "copy") .Site.Params.share.services }}
-<div class="border-t border-tlgray-200 pt-8 pb-8">
-  <h5
-    class="text-center text-sm font-semibold text-gray-500 uppercase tracking-wider mb-6"
-  >
+<div class="border-t border-slate-200 pt-8 pb-8">
+  <h5 class="mb-6 text-center text-sm font-semibold uppercase tracking-wider text-slate-500">
     Share this post
   </h5>
   <div class="flex flex-wrap justify-center gap-4">
@@ -11,7 +9,7 @@
     <a
       href="https://twitter.com/intent/tweet?url={{ .Permalink }}&text={{ .Title }}"
       target="_blank"
-      class="flex items-center gap-2 px-6 py-3 bg-black text-white hover:bg-gray-800 transition-all shadow-sm hover:shadow-md"
+      class="flex items-center gap-2 rounded-full border border-slate-200 bg-white px-6 py-3 text-slate-950 transition-colors hover:border-slate-300 hover:bg-slate-50"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -32,7 +30,7 @@
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Share on Mastodon"
-      class="flex items-center gap-2 px-6 py-3 bg-[#6364FF] text-white hover:bg-[#5250dd] transition-all shadow-sm hover:shadow-md"
+      class="flex items-center gap-2 rounded-full border border-slate-200 bg-white px-6 py-3 text-slate-950 transition-colors hover:border-slate-300 hover:bg-slate-50"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +49,7 @@
     <a
       href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}&t={{ .Title }}"
       target="_blank"
-      class="flex items-center gap-2 px-6 py-3 bg-[#1877F2] text-white hover:bg-[#166fe5] transition-all shadow-sm hover:shadow-md"
+      class="flex items-center gap-2 rounded-full border border-slate-200 bg-white px-6 py-3 text-slate-950 transition-colors hover:border-slate-300 hover:bg-slate-50"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -72,7 +70,7 @@
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Share on LinkedIn"
-      class="flex items-center gap-2 px-6 py-3 bg-[#0A66C2] text-white hover:bg-[#054a8f] transition-all shadow-sm hover:shadow-md"
+      class="flex items-center gap-2 rounded-full border border-slate-200 bg-white px-6 py-3 text-slate-950 transition-colors hover:border-slate-300 hover:bg-slate-50"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -93,7 +91,7 @@
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Share on WhatsApp"
-      class="flex items-center gap-2 px-6 py-3 bg-green-600 text-white hover:bg-green-700 transition-all shadow-sm hover:shadow-md"
+      class="flex items-center gap-2 rounded-full border border-slate-200 bg-white px-6 py-3 text-slate-950 transition-colors hover:border-slate-300 hover:bg-slate-50"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -111,7 +109,7 @@
     {{ end }} {{ if in $services "line" }}
     <a
       href="https://timeline.line.me/social-plugin/share?url={{ .Permalink }}"
-      class="flex items-center gap-2 px-6 py-3 bg-[#06C755] text-white hover:bg-[#05b34c] transition-all shadow-sm hover:shadow-md"
+      class="flex items-center gap-2 rounded-full border border-slate-200 bg-white px-6 py-3 text-slate-950 transition-colors hover:border-slate-300 hover:bg-slate-50"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -130,7 +128,7 @@
     <a
       href="mailto:?subject={{ .Title | urlquery }}&body={{ .Permalink | urlquery }}"
       aria-label="Share by email"
-      class="flex items-center gap-2 px-6 py-3 bg-gray-500 text-white hover:bg-gray-600 transition-all shadow-sm hover:shadow-md"
+      class="flex items-center gap-2 rounded-full border border-slate-200 bg-white px-6 py-3 text-slate-950 transition-colors hover:border-slate-300 hover:bg-slate-50"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -150,7 +148,7 @@
       onclick="OnClickURL()"
       id="url"
       data-clipboard-text="{{ .Title }} {{ .Permalink }}"
-      class="flex items-center gap-2 px-6 py-3 bg-gray-700 text-white hover:bg-gray-600 transition-all shadow-sm hover:shadow-md cursor-pointer"
+      class="flex cursor-pointer items-center gap-2 rounded-full border border-slate-200 bg-white px-6 py-3 text-slate-950 transition-colors hover:border-slate-300 hover:bg-slate-50"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

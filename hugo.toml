@@ -1,4 +1,4 @@
-baseURL = "https://example.com"
+baseURL = "https://pranet.cse.iith.ac.in/"
 title = "Practical Networking & Blockchain Lab"
 author = "username"
 locale = "en"
@@ -20,14 +20,14 @@ googleFonts = true
 
   [params.logo]
   main = "img/logo/logo.svg" #Change this once we have a Logo
-  alt = "PraNet"
+  alt = "PRANET"
 
   # The size parameter is the class name of tailwindcss
   # https://tailwindcss.com/
   size = "h-12"
 
   [params.site]
-  name = "PraNet"
+  name = "Practical Networking & Blockchain Lab"
 
   [params.icon]
   # If you want to use FontAwesome, set this parameter to true.
@@ -67,7 +67,7 @@ googleFonts = true
 [menu]
   [[menu.main]]
   identifier = "people"
-  name = "People"
+    name = "People"
   url = "/people/"
   weight = 2
 

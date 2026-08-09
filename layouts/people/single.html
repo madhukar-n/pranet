@@ -1,0 +1,94 @@
+{{ define "meta_tags" }}
+
+<meta property="og:site_name" content="{{ .Site.Title }}" />
+<meta property="og:title" content="{{ .Title }} | {{ .Site.Title }}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta name="twitter:card" content="summary_large_image">
+<meta property="twitter:title" content="{{ .Title }}">
+
+{{ if .Params.image }}
+{{ with .Params.image }}
+<meta property="og:image" content="{{ . | absURL }}">
+{{ end }}
+{{ else }}
+<meta property="og:image" content="{{ .Site.Params.homepage_meta_tags.meta_og_image | absURL }}">
+{{ end }}
+
+{{- if .Description }}
+<meta name="description" content="{{ .Description }}" />
+<meta property="og:description" content="{{ .Description }}" />
+<meta property="twitter:description" content="{{ .Description }}" />
+{{- else if .Summary }}
+<meta name="description" content="{{ .Summary }}" />
+<meta property="og:description" content="{{ .Summary }}" />
+<meta property="twitter:description" content="{{ .Summary }}" />
+{{- else if .Site.Params.description }}
+<meta name="description" content="{{ .Site.Params.description }}" />
+<meta property="og:description" content="{{ .Site.Params.description }}" />
+<meta property="twitter:description" content="{{ .Site.Params.description }}" />
+{{- end }}
+
+{{ end }}
+
+{{ define "main" }}
+{{ $bg := .Params.bg_hex | default .Params.hexcode | default "#f5f7fb" }}
+{{ $name := .Params.name | default .Title }}
+
+<section class="people-single">
+  <div class="people-single__shell container">
+    <a href="/people/" class="people-back-link inline-flex items-center gap-2 text-sm font-semibold text-slate-600 transition hover:text-slate-950">
+      <span aria-hidden="true">←</span>
+      Back to people
+    </a>
+
+    <div class="people-profile-card">
+      <div class="people-profile-grid">
+        <div class="people-profile-visual">
+          {{ with .Params.image }}
+          {{ $image := $.Resources.GetMatch . }}
+          <div class="people-profile-avatar">
+            {{ if $image }}
+            <img src="{{ $image.RelPermalink }}" alt="{{ $name }}" class="h-full w-full object-cover">
+            {{ else }}
+            <img src="{{ . | relURL }}" alt="{{ $name }}" class="h-full w-full object-cover">
+            {{ end }}
+          </div>
+          {{ end }}
+
+          <div class="people-profile-meta">
+            <h3 class="people-profile-name">{{ $name }}</h3>
+            {{ with .Params.role }}
+            <p class="people-profile-role">{{ . }}</p>
+            {{ end }}
+          </div>
+
+          <div class="people-profile-links">
+            {{ with .Params.email }}
+            <a href="mailto:{{ . }}" class="people-profile-link">
+              <i class="bi bi-envelope-fill"></i>
+              <span>Email</span>
+            </a>
+            {{ end }}
+            {{ with .Params.website }}
+            <a href="{{ . }}" target="_blank" rel="noopener" class="people-profile-link">
+              <i class="bi bi-globe2"></i>
+              <span>Website</span>
+            </a>
+            {{ end }}
+          </div>
+        </div>
+
+        <div class="people-profile-body">
+          <div class="people-profile-bio">
+            {{ .Content }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}
+
+{{ define "body_attrs" }}style="--people-bg: {{ .Params.bg_hex | default .Params.hexcode | default "#f5f7fb" }};"{{ end }}

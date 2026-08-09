@@ -1,0 +1,72 @@
+
+# Example entry shape:
+# [[publications]]
+# title = "Paper Title"
+# authors = "Author One, Author Two"
+# venue = "Conference or Journal Name"
+# year = 2026
+# doi = "https://doi.org/10.0000/example"
+
+
+[[publications]]
+title = "Enhancing Security and Achievability of PBFT-Based Consensus Development for Connected Vehicles With Location-Based Trust"
+authors = "R Verma, K Kataoka"
+venue = "IEEE Transactions on Intelligent Transportation Systems"
+year = 2025
+doi = "doi.org/10.1109/TITS.2025.3640392"
+
+[[publications]]
+title = "Integrating Network State Verification with Knowledge Graph based Digital Twin for SDN"
+authors = "Dnyaneshwar Shinde,Sai Sravan V,Krishna Teja,Deepu Raj R,Kotaro Kataoka"
+venue = "IEEE Conference on Network Function Virtualization and Software-Defined Networking (NFV-SDN)"
+year = "2025"
+doi = "doi.org/10.1109/NFV-SDN66355.2025.11349405"
+
+[[publications]]
+title = "HRL-D3: High resolution and lightweight defective data detection for IoT data integrity"
+authors = "S Kar, RS Nalawade, VA Shounik, VR Patil, K Kataoka"
+venue = "Future Generation Computer Systems"
+year = "2025"
+doi = ""
+
+[[publications]]
+title = "Consensus based High Consistency Ledger Pruning for DAG-based IoT Blockchain"
+authors = "KAK Parigi, K Kataoka"
+venue = "IEEE 11th World Forum on Internet of Things (WF-IoT)"
+year = "2025"
+doi = "/"
+
+[[publications]]
+title = "Comparative Evaluation of Threshold-based Anonymous Credential Systems over Blockchain"
+authors = "R Ali, A Gupta, M Francis, K Kataoka"
+venue = "IEEE International Conference on Decentralized Applications and …"
+year = "2025"
+doi = "/"
+
+[[publications]]
+title = "Gateway-based Cross-Chain Transaction Protocols for Permissionless and Permissioned Blockchains"
+authors = "VR Patil, RS Nalawade, K Kataoka, SS Dangat, X Xu"
+venue = ""
+year = "2025"
+doi = "/"
+
+[[publications]]
+title = "Otex: Ownership transfer and execution protocol for blockchain interoperability"
+authors = "S Dangat, S Kar, B Toshniwal, K Kataoka, Y Huang, H Abe, X Xu"
+venue = " IEEE International Conference on Blockchain (Blockchain)"
+year = "2024"
+doi = "/"
+
+[[publications]]
+title = "Building a digital twin network of SDN using knowledge graphs"
+authors = "DRR Raj, TA Shaik, A Hirwe, P Tammana, K Kataoka"
+venue = "IEEE access 11"
+year = "2023"
+doi = "/"
+
+[[publications]]
+title = "Verifiable and robust monitoring and alerting system for road safety by AI based consensus development on blockchain"
+authors = "R Verma, VS Vishnu, K Kataoka"
+venue = "IEEE Intelligent Vehicles Symposium (IV)"
+year = "2023"
+doi = ""

@@ -18,7 +18,6 @@
 <!-- Professors Row -->
 {{ if $professors }}
 <div class="people-section">
-  <h3 class="section-title">Faculty</h3>
   <div class="people-grid">
     {{ range $professors }}
       {{ partial "people-card.html" . }}
@@ -30,7 +29,6 @@
 <!-- PhD Researchers Row -->
 {{ if $phds }}
 <div class="people-section">
-  <h3 class="section-title">PhD Researchers</h3>
   <div class="people-grid">
     {{ range $phds }}
       {{ partial "people-card.html" . }}
@@ -42,7 +40,6 @@
 <!-- MTech RAs Row -->
 {{ if $mtechRAs }}
 <div class="people-section">
-  <h3 class="section-title">MTech Research Assistants</h3>
   <div class="people-grid">
     {{ range $mtechRAs }}
       {{ partial "people-card.html" . }}
@@ -54,7 +51,6 @@
 <!-- MTech TAs Row -->
 {{ if $mtechTAs }}
 <div class="people-section">
-  <h3 class="section-title">MTech Teaching Assistants</h3>
   <div class="people-grid">
     {{ range $mtechTAs }}
       {{ partial "people-card.html" . }}

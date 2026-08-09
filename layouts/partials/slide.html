@@ -1,14 +1,65 @@
-<div class="splide" role="group" aria-label="Top Page Slides">
-    <div class="splide__track">
+{{ $slides := hugo.Data.slide.slide | default slice }}
+{{ if gt (len $slides) 0 }}
+<section class="mx-auto mt-4 max-w-7xl px-4 sm:px-6 lg:px-8">
+  <div class="page-card overflow-hidden ">
+    <div class="splide hero-splide" role="group" aria-label="Top Page Slides">
+      <div class="splide__track">
         <ul class="splide__list">
-                {{ range hugo.Data.slide.slide }}
-                <li class="splide__slide">
-                    <img src="{{ .image | relURL }}" alt="{{ .alt }}">
-                    <div class="s-fade-txt">
-                        <h1 class="text-4xl font-medium {{ or .color "text-white" }}">{{ .title }}</h1>
-                    </div>
-                </li>
-                {{ end }}          
+          {{ range $index, $slide := $slides }}
+          <li class="splide__slide">
+            <img
+              src="{{ $slide.image | relURL }}"
+              alt="{{ $slide.alt | default $slide.title | default "Lab slide" }}"
+              loading="{{ if eq $index 0 }}eager{{ else }}lazy{{ end }}"
+              {{ if eq $index 0 }}fetchpriority="high"{{ end }}
+            >
+            <div class="slide-overlay ">
+              <div class="hero-copy slide-copy">
+                <h2 class="slide-title text-3xl font-semibold leading-tight tracking-tight text-slate-950 md:text-5xl">
+                  {{ $slide.title | default site.Title }}
+                </h2>
+                <!-- <p class="mt-4 max-w-2xl text-sm leading-6 text-slate-600 md:text-base">
+                  {{ $slide.description | default "Practical networking and blockchain research, framed as systems you can inspect, benchmark, and extend." }}
+                </p> -->
+              </div>
+            </div>
+          </li>
+          {{ end }}
         </ul>
+      </div>
     </div>
-</div>
+  </div>
+</section>
+
+<script src="{{ "js/splide.min.js" | relURL }}"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const el = document.querySelector(".hero-splide");
+    if (!el || typeof Splide === "undefined") return;
+
+    new Splide(el, {
+      type: "loop",
+      perPage: 1,
+      perMove: 1,
+      arrows: true,
+      pagination: true,
+      autoplay: true,
+      interval: 6000,
+      pauseOnHover: true,
+      pauseOnFocus: true,
+      speed: 850,
+      drag: true,
+      gap: 0,
+      rewind: true,
+      classes: {
+        arrows: "splide__arrows hero-splide__arrows",
+        arrow: "splide__arrow hero-splide__arrow",
+        prev: "splide__arrow--prev hero-splide__arrow--prev",
+        next: "splide__arrow--next hero-splide__arrow--next",
+        pagination: "splide__pagination hero-splide__pagination",
+        page: "splide__pagination__page hero-splide__page",
+      },
+    }).mount();
+  });
+</script>
+{{ end }}

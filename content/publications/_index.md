@@ -1,6 +1,5 @@
 +++
 title = "Publications"
 description = "Research publications from our lab"
+layout = "publications"
 +++
-
-Our lab's research contributions and publications in peer-reviewed venues and conferences.

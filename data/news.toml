@@ -1,0 +1,12 @@
+
+# Example entry shape:
+# [[news]]
+# title = "Paper accepted at XYZ"
+# summary = "A short update about the lab."
+# date = "2026-08-09"
+# link = "/research/"
+
+
+[[news]]
+title = "Welcome,Atharva,Arun and Ashutosh"
+date = "2026-08-09"

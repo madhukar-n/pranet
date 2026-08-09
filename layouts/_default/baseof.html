@@ -6,7 +6,7 @@
   {{ block "meta_tags" . }}{{end}}
 </head>
 
-<body class="flex flex-col min-h-screen">
+<body class="{{ if eq .Section "people" }}people-page {{ end }}flex flex-col min-h-screen" {{ block "body_attrs" . }}{{ end }}>
   <main class="grow">
     {{- partial "header.html" . -}}
     <div class="scroll-top rounded-full flex items-center justify-center">
