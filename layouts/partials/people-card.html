@@ -1,5 +1,5 @@
 <div class="people-card h-full">
-  <a href="/{{ path.Base .File.Dir }}">
+  <a href="/people/{{ path.Base .File.Dir }}">
   {{ if .Params.image }}
     {{ $image := .Resources.GetMatch .Params.image }}
     <div class="people-image">

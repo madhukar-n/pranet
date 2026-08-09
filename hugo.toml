@@ -19,12 +19,9 @@ mainSections = ['News']
 googleFonts = true
 
   [params.logo]
-  main = "img/logo/logo.svg" #Change this once we have a Logo
-  alt = "PRANET"
-
-  # The size parameter is the class name of tailwindcss
-  # https://tailwindcss.com/
-  size = "h-12"
+  main = "images/logo.svg"
+  alt = "Pranet"
+  size = "h-10 w-auto"
 
   [params.site]
   name = "Practical Networking & Blockchain Lab"

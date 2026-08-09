@@ -23,14 +23,24 @@
         </ul>
     </div>
     <nav class="mx-auto flex max-w-7xl flex-wrap items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        <div class="flex items-center shrink-0 mr-6">
-            <a href="{{ .Site.BaseURL }}" class="site-nav-brand flex items-center gap-3">
-                <img alt="{{ .Site.Params.logo.alt }}"
-                    class="{{ .Site.Params.logo.size }} mr-1" src="{{ .Site.Params.logo.main | relURL }}">
-                <div class="hidden md:block">
-                    <div class="site-brand-name text-sm font-semibold tracking-tight text-slate-900">{{ .Site.Params.site.name }}</div>
-                </div>
-            </a>
+        <div class="flex shrink-0 items-center mr-6">
+        <a href="{{ "/" | relURL }}" class="site-nav-brand flex items-center gap-3">
+        {{ $logo := resources.Get .Site.Params.logo.main }}
+
+        {{ if $logo }}
+        <img
+    src="{{ $logo.RelPermalink }}"
+    alt="{{ .Site.Params.logo.alt }}"
+    class="{{ .Site.Params.logo.size | default "h-8 w-auto md:h-10" }} mr-1 shrink-0"
+    loading="eager"
+    >
+{{ end }}
+        <div class="hidden md:block">
+            <div class="site-brand-name text-sm font-semibold tracking-tight text-slate-900">
+                {{ .Site.Params.site.name }}
+            </div>
+        </div>
+        </a>
         </div>
         <div class="block lg:hidden">
             <div id="hamburgerbtn" class="mopen flex h-11 w-14 cursor-pointer items-center">
