@@ -21,7 +21,7 @@ googleFonts = true
   [params.logo]
   main = "images/logo.svg"
   alt = "Pranet"
-  size = "h-10 w-auto"
+  size = "h-8 w-auto md:h-10"
 
   [params.site]
   name = "Practical Networking & Blockchain Lab"
