@@ -31,7 +31,7 @@ googleFonts = true
 
   [params.icon]
   # If you want to use FontAwesome, set this parameter to true.
-  fontawesome = trues
+  fontawesome = true
 
   # You can also use Bootstrap Icons.
   bootstrap = true
