@@ -31,7 +31,12 @@
           {{ .Params.position }}
         </p>
       {{ end }}
-    </div>
 
+      {{ if .Params.research_area }}
+        <p class = "people-position">
+          {{ .Params.research_area }}
+        </p>
+        {{ end }}
+    </div>
   </a>
 </div>
