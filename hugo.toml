@@ -31,16 +31,10 @@ googleFonts = true
 
   [params.icon]
   # If you want to use FontAwesome, set this parameter to true.
-  #fontawesome = true
+  fontawesome = trues
 
   # You can also use Bootstrap Icons.
   bootstrap = true
-
-  [params.share]
-  # If you want to use share buttons, set this parameter to true.
-  enable = true
-  # Uncomment and edit to limit which services are shown
-  # services = ["twitter", "mastodon", "facebook", "line", "linkedin", "whatsapp", "mail", "copy"]
 
   [params.homepage_meta_tags]
   meta_description = "Network and Blockchain research lab at IITH"
@@ -48,21 +42,6 @@ googleFonts = true
   meta_og_type = "website"
   
 
-  [params.giscus]
-  # Giscus Comment System
-  # See https://giscus.app for setup instructions
-  #repo = "your-repo"
-  #repo_id = "your-repo-id"
-  #category = "Announcements"
-  #category_id = "your-category-id"
-  #mapping = "pathname"
-  #strict = "0"
-  #reactions_enabled = "1"
-  #emit_metadata = "0"
-  #input_position = "bottom"
-  #theme = "preferred_color_scheme"
-  #lang = "en"
-  #loading = "lazy"
 
 [menu]
   [[menu.main]]
