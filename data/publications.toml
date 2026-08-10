@@ -53,7 +53,7 @@ doi = "/"
 [[publications]]
 title = "Otex: Ownership transfer and execution protocol for blockchain interoperability"
 authors = "S Dangat, S Kar, B Toshniwal, K Kataoka, Y Huang, H Abe, X Xu"
-venue = " IEEE International Conference on Blockchain (Blockchain)"
+venue = "IEEE International Conference on Blockchain (Blockchain)"
 year = "2024"
 doi = "/"
 
@@ -70,3 +70,45 @@ authors = "R Verma, VS Vishnu, K Kataoka"
 venue = "IEEE Intelligent Vehicles Symposium (IV)"
 year = "2023"
 doi = ""
+
+[[publications]]
+title = "Inter-domain prefix and route validation using fast and scalable DAG based distributed ledger for secure BGP routing"
+authors = "Prashanth Podili, Sumanth Reddy Cherupally, Srinivas Boga, Kotaro Kataoka"
+venue = "Journal of Network and Systems Management"
+year = "2022"
+doi = "doi.org/10.1007/s10922-022-09668-2"
+
+[[publications]]
+title = "ResiConnect-Fault Detection and Resilience for Multi-Stage AWGR-based Optical Networks"
+authors = "Anish Hirwe, Nikita Makharia, Tanmay Renugunta, Kotaro Kataoka"
+venue = "23rd Asia-Pacific Network Operations and Management Symposium (APNOMS)"
+year = "2022"
+doi = "doi.org/10.23919/APNOMS56106.2022.9919962"
+
+[[publications]]
+title = "capsAEUL: Slow http DoS attack detection using autoencoders through unsupervised learning"
+authors = "Tahir Ahmed Shaik, Kotaro Kataoka"
+venue = "Proceedings of the 16th Asian Internet Engineering Conference"
+year = "2021"
+doi = "doi.org/10.1145/3497777.3498550"
+
+[[publications]]
+title = "Topology poisoning attacks and prevention in hybrid software-defined networks"
+authors = "Pragati Shrivastava, Kotaro Kataoka"
+venue = "IEEE Transactions on Network and Service Management"
+year = "2021"
+doi = "doi.org/10.1109/TNSM.2021.3109099"
+
+[[publications]]
+title = "TRAQR: Trust aware End-to-End QoS routing in multi-domain SDN using Blockchain"
+authors = "Prashanth Podili, Kotaro Kataoka"
+venue = "Journal of Network and Computer Applications"
+year = "2021"
+doi = "doi.org/10.1016/j.jnca.2021.103055"
+
+[[publications]]
+title = "Lightweight and Scalable DAG based distributed ledger for verifying IoT data integrity"
+authors = "SR Cherupally, S Boga, P Podili, K Kataoka"
+venue = "International Conference on Information Networking (ICOIN)"
+year = "2021"
+doi = "doi.org/10.1109/ICOIN50884.2021.9334000"
