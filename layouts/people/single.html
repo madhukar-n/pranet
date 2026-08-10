@@ -57,11 +57,11 @@
     <p class="people-profile-role">{{ . }}</p>
   {{ end }}
   {{ if .Params.research_area }}
-    <span>Research areas</span>
+    <span>Research area(s)</span>
     <p class="people-profile-research text-sm text-gray-500 mt-0.5">
       {{ .Params.research_area }}
     </p>
-  s{{ end }}
+  {{ end }}
 </div>
 
 <div class="people-profile-links">

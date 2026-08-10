@@ -1,5 +1,5 @@
 <div class="people-card h-full">
-  <a href="{{ .RelPermalink }}" class="block h-full">
+  <a href="{{ .RelPermalink}}" class="block h-full">
 
     {{ if .Params.image }}
       {{ $image := .Resources.GetMatch .Params.image }}
@@ -34,7 +34,7 @@
 
       {{ if .Params.research_area }}
         <p class = "people-position">
-          {{ .Params.research_area }}
+          {{ .Params.research_area | safeHTML | truncate 40 }}
         </p>
         {{ end }}
     </div>
