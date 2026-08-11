@@ -2,6 +2,7 @@
 {{ $phds := slice }}
 {{ $mtechRAs := slice }}
 {{ $mtechTAs := slice }}
+{{ $graduated := slice }}
 
 {{ range .Pages }}
   {{ if eq .Params.role "Professor" }}
@@ -12,12 +13,21 @@
     {{ $mtechRAs = $mtechRAs | append . }}
   {{ else if eq .Params.role "MTech TA" }}
     {{ $mtechTAs = $mtechTAs | append . }}
+  {{ else if eq .Params.role "Graduated" }}
+    {{ $graduated = $graduated | append . }}
   {{ end }}
 {{ end }}
+
+{{ $phds = sort $phds ".Params.email" }}
+{{ $mtechRAs = sort $mtechRAs ".Params.email" }}
+{{ $mtechTAs = sort $mtechTAs ".Params.emails"  }}
 
 <!-- Professors Row -->
 {{ if $professors }}
 <div class="people-section">
+  <!-- <h4 class="people-name">
+    Faculty
+  </h4> -->
   <div class="people-grid">
     {{ range $professors }}
       {{ partial "people-card.html" . }}
@@ -29,6 +39,9 @@
 <!-- PhD Researchers Row -->
 {{ if $phds }}
 <div class="people-section">
+  <!-- <h3 class="people-name">
+  PhD 
+  </h3> -->
   <div class="people-grid">
     {{ range $phds }}
       {{ partial "people-card.html" . }}
@@ -38,8 +51,11 @@
 {{ end }}
 
 <!-- MTech RAs Row -->
-{{ if $mtechRAs }}
+{{ if $mtechRAs  }}
 <div class="people-section">
+  <!-- <h3 class="people-name">
+      MTech RA
+  </h3> -->
   <div class="people-grid">
     {{ range $mtechRAs }}
       {{ partial "people-card.html" . }}
@@ -53,6 +69,16 @@
 <div class="people-section">
   <div class="people-grid">
     {{ range $mtechTAs }}
+      {{ partial "people-card.html" . }}
+    {{ end }}
+  </div>
+</div>
+{{ end }}
+
+{{ if $graduated }}
+<div class = "people-section">
+  <div class = "people-grid">
+    {{ range $graduated }}
       {{ partial "people-card.html" . }}
     {{ end }}
   </div>
