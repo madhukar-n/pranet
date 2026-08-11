@@ -112,3 +112,73 @@ authors = "SR Cherupally, S Boga, P Podili, K Kataoka"
 venue = "International Conference on Information Networking (ICOIN)"
 year = "2021"
 doi = "doi.org/10.1109/ICOIN50884.2021.9334000"
+
+[[publications]]
+title = "pSMART: A lightweight, privacy-aware service function chain orchestration in multi-domain NFV/SDN"
+authors = "Kalpana D. Joshi, Kotaro Kataoka"
+venue = "Computer Networks 178"
+year = "2020"
+doi = "doi.org/10.1016/j.comnet.2020.107295"
+
+[[publications]]
+title = "Predicting dynamic network state of sfc operation with uncertainties"
+authors = "Anish Hirwe, Ibrahim Dalal, Kotaro Kataoka"
+venue = "IEEE Communications Letters 24"
+year = "2020"
+doi = "doi.org/10.1109/lcomm.2020.3008245"
+
+[[publications]]
+title = "FDN: Function delivery network-Optimizing service chain deployment in NFV"
+authors = "Anish HIRWE, Kotaro KATAOKA"
+venue = "IEICE Transactions on Communications 103"
+year = "2020"
+doi = "doi.org/10.1587/transcom.2019ebp3167"
+
+[[publications]]
+title = "EvilScout: Detection and mitigation of evil twin attack in SDN enabled WiFi"
+authors = "Pragati Shrivastava, Mohd Saalim Jamal, Kotaro Kataoka"
+venue = "IEEE Transactions on Network and Service Management 17"
+year = "2020"
+doi = "doi.org/10.1109/tnsm.2020.2972774"
+
+[[publications]]
+title = "PACEX: Patient-centric EMR exchange in healthcare systems using blockchain"
+authors = "Bhavesh Toshniwal, Prashanth Podili, Ravula Jaysimha Reddy, Kotaro Kataoka"
+venue = "IEEE 10th Annual Information Technology, Electronics and Mobile Communication Conference (IEMCON)"
+year = "2019"
+doi = "doi.org/10.1109/iemcon.2019.8936258"
+
+[[publications]]
+title = "BEAM: Behavior-based access control mechanism for SDN applications"
+authors = "Bhavesh Toshniwal, Kalpana D. Joshi, Pragati Shrivastava, Kotaro Kataoka"
+venue = "28th International Conference on Computer Communication and Networks (ICCCN)"
+year = "2019"
+doi = "doi.org/10.1109/icccn.2019.8846954"
+
+[[publications]]
+title = "PRIME-Q: Privacy aware end-to-end QoS framework in multi-domain SDN"
+authors = "Kalpana D. Joshi, Kotaro Kataoka"
+venue = "IEEE Conference on Network Softwarization (NetSoft)"
+year = "2019"
+doi = "doi.org/10.1109/netsoft.2019.8806645"
+
+[[publications]]
+title = "VIBHAJAN: A lightweight and scalable control plane management for multi-controller SDN"
+authors = "Mohd Saalim Jamal, Anish Hirwe, Kotaro Kataoka"
+venue = "Conference on Network Function Virtualization and Software Defined Networks (NFV-SDN)"
+year = "2018"
+doi = "doi.org/10.1109/nfv-sdn.2018.8725802"
+
+[[publications]]
+title = "A smartphone-based probe data platform for road management and safety in developing countries"
+authors = "Kotaro Kataoka, Saurabh Gangwar, Karthik Yadav Mudda, Souraj Mandal"
+venue = "IEEE international conference on data mining workshops (ICDMW), 612-615, 2018"
+year = "2018"
+doi = "doi.org/10.1109/icdmw.2018.00095"
+
+[[publications]]
+title = "Dynamic Network Function (DNF) Service Chain Placement and Bottleneck Removal for Edge-Fog-Cloud Interplay"
+authors = "Anish Hirwe, Mrinal Aich, Kotaro Kataoka"
+venue = "Proceedings of the 14th Asian Internet Engineering Conference"
+year = "2018"
+doi = ""
