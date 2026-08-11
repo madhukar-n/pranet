@@ -18,7 +18,7 @@ Atharva is an MTech (RA) student in Networks and Information Security at IIT Hyd
 **Background**
 
 * MTech (RA), Networks and Information Security – IIT Hyderabad
-* Ex-Design Engineer – 2 years of experience in Model-Based Systems Engineering (MBSE)
+* Ex-Systems Engineer – 2 years of experience in Model Based Systems Engineering (MBSE)
 * B.Tech, Electronics and Communication Engineering (ECE)
 
 **Research Interests**
