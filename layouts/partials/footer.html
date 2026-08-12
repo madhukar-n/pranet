@@ -23,16 +23,76 @@
       const hamburger = document.getElementById("hamburgerbtn");
       const overlay = document.getElementById("overlay");
       const body = document.body;
+      let lastFocused = null;
 
       if (!hamburger || !overlay) {
         return;
       }
 
-      hamburger.addEventListener("click", function () {
-        overlay.classList.toggle("open");
-        hamburger.classList.toggle("is-open");
-        body.classList.toggle("scroll-lock");
+      function openNav() {
+        lastFocused = document.activeElement;
+        overlay.classList.add("open");
+        hamburger.classList.add("is-open");
+        hamburger.setAttribute('aria-expanded', 'true');
+        overlay.setAttribute('aria-hidden', 'false');
+        overlay.classList.remove('translate-up');
+        overlay.classList.add('translate-none');
+        const first = overlay.querySelector('a, button');
+        if (first) first.focus();
+      }
+
+      function closeNav() {
+        overlay.classList.remove("open");
+        hamburger.classList.remove("is-open");
+        hamburger.setAttribute('aria-expanded', 'false');
+        overlay.setAttribute('aria-hidden', 'true');
+        overlay.classList.remove('translate-none');
+        overlay.classList.add('translate-up');
+        if (lastFocused && typeof lastFocused.focus === 'function') {
+          lastFocused.focus();
+        } else {
+          hamburger.focus();
+        }
+      }
+
+      hamburger.addEventListener("click", function (e) {
+        e.preventDefault();
+        if (overlay.classList.contains('open')) closeNav(); else openNav();
       });
+
+      overlay.addEventListener('click', function (e) {
+        const link = e.target.closest('a');
+        if (link) closeNav();
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && overlay.classList.contains('open')) {
+          closeNav();
+        }
+
+        if (e.key === 'Tab' && overlay.classList.contains('open')) {
+          const focusable = overlay.querySelectorAll('a, button, [tabindex]:not([tabindex="-1"])');
+          if (!focusable.length) return;
+          const first = focusable[0];
+          const last = focusable[focusable.length - 1];
+          if (e.shiftKey && document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+          } else if (!e.shiftKey && document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+          }
+        }
+      });
+
+      window.addEventListener('resize', function () {
+        if (window.innerWidth >= 1024 && overlay.classList.contains('open')) {
+          closeNav();
+        }
+      });
+
+      hamburger.setAttribute('aria-expanded', 'false');
+      overlay.setAttribute('aria-hidden', 'true');
     }
     toggleNav();
 

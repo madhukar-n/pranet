@@ -172,7 +172,7 @@ doi = "doi.org/10.1109/nfv-sdn.2018.8725802"
 [[publications]]
 title = "A smartphone-based probe data platform for road management and safety in developing countries"
 authors = "Kotaro Kataoka, Saurabh Gangwar, Karthik Yadav Mudda, Souraj Mandal"
-venue = "IEEE international conference on data mining workshops (ICDMW), 612-615, 2018"
+venue = "IEEE international conference on data mining workshops (ICDMW), 2018"
 year = "2018"
 doi = "doi.org/10.1109/icdmw.2018.00095"
 
@@ -186,35 +186,35 @@ doi = ""
 [[publications]]
 title = "Instruct: A clustering based identification of valid communications in iot networks"
 authors = "Mohd Saalim Jamal, Venkata Keerthy S., Hideya Ochiai, Hiroshi Esaki, Kotaro Kataoka"
-venue = "Fifth International Conference on Internet of Things: Systems …, 2018"
+venue = "Fifth International Conference on Internet of Things: Systems, Management and Security"
 year = "2018"
 doi = "doi.org/10.1109/iotsms.2018.8554755"
 
 [[publications]]
 title = "Detection of topology poisoning by silent relay attacker in SDN"
 authors = "Pragati Shrivastava, Annanay Agarwal, Kotaro Kataoka"
-venue = "Proceedings of the 24th annual international conference on mobile computing …, 2018"
+venue = "Proceedings of the 24th annual international conference on mobile computing and networking"
 year = "2018"
 doi = "doi.org/10.1145/3241539.3267763"
 
 [[publications]]
 title = "LEGION: Lightweight & Distributed Mobility Management for MSDN based Large-scale WiFi"
 authors = "Pragati Shrivastava, Kotaro Kataoka"
-venue = "4th IEEE Conference on Network Softwarization and Workshops (NetSoft …, 2018"
+venue = "4th IEEE Conference on Network Softwarization and Workshops (NetSoft)"
 year = "2018"
 doi = "doi.org/10.1109/netsoft.2018.8460085"
 
 [[publications]]
 title = "Effective resource provisioning for QoS-aware virtual networks in SDN"
 authors = "Prashanth Podili, Kotaro Kataoka"
-venue = "NOMS 2018-2018 IEEE/IFIP Network Operations and Management Symposium, 1-9, 2018"
+venue = "NOMS 2018-2018 IEEE/IFIP Network Operations and Management Symposium, 2018"
 year = "2018"
 doi = "doi.org/10.1109/noms.2018.8406241"
 
 [[publications]]
 title = "Trust list: Internet-wide and distributed IoT traffic management using blockchain and SDN"
 authors = "Kotaro Kataoka, Saurabh Gangwar, Prashanth Podili"
-venue = "IEEE 4th World Forum on Internet of Things (WF-IoT), 296-301, 2018"
+venue = "IEEE 4th World Forum on Internet of Things (WF-IoT), 2018"
 year = "2018"
 doi = "doi.org/10.1109/wf-iot.2018.8355139"
 
@@ -228,7 +228,7 @@ doi = ""
 [[publications]]
 title = "AMPS: Application aware multipath flow routing using machine learning in SDN"
 authors = "S Thomas Valerrian Pasca, Siva Sairam Prasad Kodali, Kotaro Kataoka"
-venue = "Twenty-third National Conference on Communications (NCC), 1-6, 2017"
+venue = "Twenty-third National Conference on Communications (NCC), 2017"
 year = "2017"
 doi = "doi.org/10.1109/ncc.2017.8077095"
 
@@ -242,41 +242,41 @@ doi = "doi.org/10.1109/wf-iot.2018.8355139"
 [[publications]]
 title = "FastSplit: fast and dynamic IP mobility management in SDN"
 authors = "Pragati Shrivastava, Kotaro Kataoka"
-venue = "26th International Telecommunication Networks and Applications …, 2016"
+venue = " 26th international telecommunication networks and applications conference (ITNAC)"
 year = "2016"
 doi = "doi.org/10.1109/atnac.2016.7878803"
 
 [[publications]]
 title = "Sfo: Subflow optimizer for mptcp in sdn"
 authors = "Kalpana D. Joshi, Kotaro Kataoka"
-venue = "26th international telecommunication networks and applications …, 2016"
+venue = "26th international telecommunication networks and applications conference (ITNAC)"
 year = "2016"
 doi = "doi.org/10.1109/atnac.2016.7878804"
 
 [[publications]]
 title = "SAFE: Software-defined authentication framework"
 authors = "Aditya V Kamath, Sudarshan S, Kotaro Kataoka, Nishant Vijayvergiya, G Bhargav Reddy, Samrat Phatale"
-venue = "Proceedings of the 12th Asian Internet Engineering Conference, 57-63, 2016"
+venue = "Proceedings of the 12th Asian Internet Engineering Conference"
 year = "2016"
 doi = ""
 
 [[publications]]
 title = "Optimizing Service Chain ID generation for flow rule compression"
 authors = "Om Prakash Nirankari, Prakash Pawar, Kotaro Kataoka"
-venue = "IEEE Conference on Network Function Virtualization and Software Defined …, 2016"
+venue = "2016 IEEE Conference on Network Function Virtualization and Software Defined Networks (NFV-SDN)"
 year = "2016"
 doi = "doi.org/10.1109/nfv-sdn.2016.7919502"
 
 [[publications]]
 title = "LightChain: A lightweight optimisation of VNF placement for service chaining in NFV"
 authors = "Anish Hirwe, Kotaro Kataoka"
-venue = "IEEE NetSoft Conference and Workshops (NetSoft), 33-37, 2016"
+venue = "IEEE NetSoft Conference and Workshops (NetSoft)"
 year = "2016"
 doi = "doi.org/10.1109/netsoft.2016.7502438"
 
 [[publications]]
 title = "Segmented proactive flow rule injection for service chaining using SDN"
 authors = "Prakash B. Pawar, Kotaro Kataoka"
-venue = "IEEE NetSoft Conference and Workshops (NetSoft), 38-42, 2016"
+venue = "IEEE NetSoft Conference and Workshops (NetSoft)"
 year = "2016"
 doi = "doi.org/10.1109/netsoft.2016.7502439"

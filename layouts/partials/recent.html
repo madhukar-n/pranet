@@ -1,4 +1,4 @@
-{{ $news := hugo.Data.news.news | default slice }}
+{{ $news := .Site.Data.news.news | default slice }}
 
 <div class="divide-y divide-slate-300 rounded-[1.25rem] border border-slate-300 bg-white">
   {{ range first 3 $news }}

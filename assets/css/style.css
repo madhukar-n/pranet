@@ -769,11 +769,19 @@ body.people-page::after {
 #overlay {
   transition: opacity 0.25s ease, transform 0.25s ease;
   background: rgba(255, 255, 255, 0.98);
+  align-items: flex-start; 
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  position: absolute; 
 }
 
 #overlay ul {
-  transform: translateY(10px);
-  transition: transform 0.25s ease;
+  transform: translateY(6px);
+  transition: transform 0.18s ease;
+  width: calc(100% - 32px);
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 #overlay.open {
@@ -784,6 +792,9 @@ body.people-page::after {
 #overlay.open ul {
   transform: translateY(0);
 }
+
+.translate-up { transform: translateY(-8px) !important; }
+.translate-none { transform: translateY(0) !important; }
 
 body.scroll-lock {
   position: fixed;

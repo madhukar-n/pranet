@@ -32,7 +32,7 @@
 {{ end }}
 
 {{ define "main" }}
-{{ $entries := hugo.Data.news.news | default slice }}
+{{ $entries := .Site.Data.news.news | default slice }}
 {{ $news := sort $entries "date" "desc" }}
 
 <div class="mx-auto mt-6 mb-10 max-w-7xl px-4 sm:px-6 lg:px-8">

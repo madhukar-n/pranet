@@ -1,5 +1,5 @@
-<header>
-    <div id="overlay" class="fixed inset-0 flex items-center justify-center px-6 opacity-0 pointer-events-none transition-opacity duration-300" aria-hidden="true">
+<header class="relative z-20">
+    <div id="overlay" class="absolute left-0 right-0 top-full flex items-start justify-center px-4 opacity-0 pointer-events-none transition-all duration-300 translate-up" aria-hidden="true" role="navigation" aria-label="Mobile main navigation" tabindex="-1">
         <ul class="list-none space-y-5 text-center text-slate-900">
             {{ range .Site.Menus.main }}
             <li class="p-2 transition-transform hover:scale-105">
@@ -40,11 +40,11 @@
         </div>
 
         <div class="block lg:hidden">
-            <div id="hamburgerbtn" class="mopen flex h-11 w-14 cursor-pointer items-center">
-                <span class="top"></span>
-                <span class="middle"></span>
-                <span class="bottom"></span>
-            </div>
+            <button id="hamburgerbtn" class="mopen flex h-11 w-14 cursor-pointer items-center justify-center" type="button" aria-controls="overlay" aria-expanded="false" aria-label="Open menu">
+                <span class="top" aria-hidden="true"></span>
+                <span class="middle" aria-hidden="true"></span>
+                <span class="bottom" aria-hidden="true"></span>
+            </button>
         </div>
 
         <div class="hidden w-full grow lg:flex lg:items-center lg:w-auto" id="mobileMenu">
