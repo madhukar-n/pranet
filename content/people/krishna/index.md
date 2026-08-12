@@ -1,5 +1,5 @@
 +++
-title = 'Krishna Tejs B'
+title = 'Krishna Teja B'
 role = 'MTech RA'
 position = 'MTech RA'
 research_area = "Network Digital Twins, Software Defined Networks"
