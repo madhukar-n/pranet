@@ -1,18 +1,12 @@
 <header>
-    <div id = "overlay" class="fixed inset-0  flex items-center justify-center px-6 opacity-0 pointer-events-none transition-opacity duration-300" aria-hidden="true">
+    <div id="overlay" class="fixed inset-0 flex items-center justify-center px-6 opacity-0 pointer-events-none transition-opacity duration-300" aria-hidden="true">
         <ul class="list-none space-y-5 text-center text-slate-900">
             {{ range .Site.Menus.main }}
             <li class="p-2 transition-transform hover:scale-105">
                 {{ $menuHref := .URL }}
-                {{ if and $.IsHome (eq .Name "Research") }}
-                  {{ if eq .Name "Research" }}
-                    {{ $menuHref = "#research" }}
-                  {{ end }}
-                {{ end }}
+
                 {{ if or (hasPrefix $menuHref "http://") (hasPrefix $menuHref "https://") }}
                 <a href="{{ $menuHref | safeURL }}" class="text-3xl font-semibold tracking-tight text-slate-900 transition-colors hover:text-slate-600 md:text-5xl">
-                {{ else if hasPrefix $menuHref "#" }}
-                <a href="{{ $menuHref }}" class="text-3xl font-semibold tracking-tight text-slate-900 transition-colors hover:text-slate-600 md:text-5xl">
                 {{ else }}
                 <a href="{{ $menuHref | relLangURL }}" class="text-3xl font-semibold tracking-tight text-slate-900 transition-colors hover:text-slate-600 md:text-5xl">
                 {{ end }}
@@ -22,26 +16,29 @@
             {{ end }}
         </ul>
     </div>
+
     <nav class="mx-auto flex max-w-7xl flex-wrap items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         <div class="flex shrink-0 items-center mr-6">
-        <a href="{{ "/" | relURL }}" class="site-nav-brand flex items-center gap-3">
-        {{ $logo := resources.Get .Site.Params.logo.main }}
+            <a href="{{ "/" | relURL }}" class="site-nav-brand flex items-center gap-3">
+                {{ $logo := resources.Get .Site.Params.logo.main }}
 
-        {{ if $logo }}
-        <img
-    src="{{ $logo.RelPermalink }}"
-    alt="{{ .Site.Params.logo.alt }}"
-    class="{{ .Site.Params.logo.size | default "h-8 w-auto md:h-10" }} mr-1 shrink-0"
-    loading="eager"
-    >
-{{ end }}
-        <div class="hidden md:block">
-            <div class="site-brand-name text-sm font-semibold tracking-tight text-slate-900">
-                {{ .Site.Params.site.name }}
-            </div>
+                {{ if $logo }}
+                <img
+                    src="{{ $logo.RelPermalink }}"
+                    alt="{{ .Site.Params.logo.alt }}"
+                    class="{{ .Site.Params.logo.size | default "h-8 w-auto md:h-10" }} mr-1 shrink-0"
+                    loading="eager"
+                >
+                {{ end }}
+
+                <div class="hidden md:block">
+                    <div class="site-brand-name text-sm font-semibold tracking-tight text-slate-900">
+                        {{ .Site.Params.site.name }}
+                    </div>
+                </div>
+            </a>
         </div>
-        </a>
-        </div>
+
         <div class="block lg:hidden">
             <div id="hamburgerbtn" class="mopen flex h-11 w-14 cursor-pointer items-center">
                 <span class="top"></span>
@@ -49,26 +46,21 @@
                 <span class="bottom"></span>
             </div>
         </div>
+
         <div class="hidden w-full grow lg:flex lg:items-center lg:w-auto" id="mobileMenu">
             <div class="lg:grow"></div>
+
             <div class="flex flex-wrap items-center gap-2 text-sm font-medium">
                 {{ range .Site.Menus.main }}
-                {{ $menuHref := .URL }}
-                {{ if and $.IsHome (eq .Name "Research") }}
-                  {{ if eq .Name "Research" }}
-                    {{ $menuHref = "#research" }}
-                  {{ end }}
-                {{ end }}
-                {{ if or (hasPrefix $menuHref "http://") (hasPrefix $menuHref "https://") }}
-                <a href="{{ $menuHref | safeURL }}"
-                {{ else if hasPrefix $menuHref "#" }}
-                <a href="{{ $menuHref }}"
-                {{ else }}
-                <a href="{{ $menuHref | relLangURL }}"
-                {{ end }}
-                    class="site-nav-link inline-flex items-center rounded-full px-4 py-2 text-slate-600 transition-all duration-200 hover:text-slate-900">
-                    {{ .Name }}
-                </a>
+                    {{ $menuHref := .URL }}
+                    {{ if or (hasPrefix $menuHref "http://") (hasPrefix $menuHref "https://") }}
+                    <a href="{{ $menuHref | safeURL }}"
+                    {{ else }}
+                    <a href="{{ $menuHref | relLangURL }}"
+                    {{ end }}
+                        class="site-nav-link inline-flex items-center rounded-full px-4 py-2 text-slate-600 transition-all duration-200 hover:text-slate-900">
+                        {{ .Name }}
+                    </a>
                 {{ end }}
             </div>
         </div>

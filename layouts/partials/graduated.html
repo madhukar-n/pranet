@@ -1,0 +1,47 @@
+<div class="people-card h-full">
+  <a href="{{ .RelPermalink}}" class="block h-full">
+
+    {{ if .Params.image }}
+      {{ $image := .Resources.GetMatch .Params.image }}
+
+      <div class="people-image">
+        {{ if $image }}
+          <img
+            src="{{ $image.RelPermalink }}"
+            alt="{{ .Title }}"
+            loading="lazy"
+          >
+        {{ else }}
+          <img
+            src="{{ .Params.image | relURL }}"
+            alt="{{ .Title }}"
+            loading="lazy"
+          >
+        {{ end }}
+      </div>
+    {{ end }}
+
+    <div class="people-info">
+      <h4 class="people-name">
+        {{ .Title }}
+      </h4>
+
+      {{ if .Params.position }}
+        <p class="people-position">
+          {{ .Params.position }}
+        </p>
+      {{ end }}
+
+      {{ if .Params.research_area }}
+        <p class = "people-position">
+          {{ .Params.research_area | safeHTML | truncate 40 }}
+        </p>
+    {{ end }}
+    {{ if .Params.now }}
+        <p class = "people-position">
+            {{ .Params.now }}
+        </p>
+    {{ end }}
+    </div>
+  </a>
+</div>

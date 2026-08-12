@@ -24,7 +24,7 @@ googleFonts = true
   size = "h-8 w-auto md:h-10"
 
   [params.site]
-  name = "Practical Networking & Blockchain Lab"
+  name = "PRANET"
 
   [params.icon]
   # If you want to use FontAwesome, set this parameter to true.
