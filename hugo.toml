@@ -45,25 +45,25 @@ googleFonts = true
   identifier = "people"
     name = "People"
   url = "/people/"
-  weight = 2
+  weight = 3
 
   [[menu.main]]
   identifier = "research"
   name = "Research"
   url = "/research/"
-  weight = 1
+  weight = 2
 
   [[menu.main]]
   identifier = "pubs"
   name = "Publications"
   url = "/publications/"
-  weight = 3
+  weight = 4
 
   [[menu.main]]
-  identifier = "contact"
-  name = "Contact"
-  url = "/contact/"
-  weight = 4
+  identifier = "home"
+  name = "Home"
+  url = "/"
+  weight = 1
 
   # Footer Menu
   [[menu.footer]]
