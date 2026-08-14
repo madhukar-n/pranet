@@ -877,6 +877,8 @@ body.scroll-lock {
   gap: 1px;
   padding: 1px;
   background: var(--site-border);
+  width: min(100%, calc(4 * 14rem + 3px));
+  margin-inline: auto;
   overflow: hidden;
 }
 

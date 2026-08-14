@@ -53,7 +53,7 @@
 
 <div class="people-profile-meta">
   <h3 class="people-profile-name">{{ $name }}</h3>
-  {{ with .Params.role }}
+  {{ with .Params.position }}
     <p class="people-profile-role">{{ . }}</p>
   {{ end }}
   {{ if .Params.research_area }}

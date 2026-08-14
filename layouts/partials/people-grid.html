@@ -21,7 +21,7 @@
 {{ $phds = sort $phds ".Params.email" }}
 {{ $mtechRAs = sort $mtechRAs ".Params.email" }}
 {{ $mtechTAs = sort $mtechTAs ".Params.emails"  }}
-
+{{ $graduated = sort $graduated ".Params.year"  "desc" }}
 <!-- Professors Row -->
 {{ if $professors }}
 <div class="people-section">
@@ -77,9 +77,10 @@
 
 {{ if $graduated }}
 <div class = "people-section">
+  <h1>Alumni</h1>
   <div class = "people-grid">
     {{ range $graduated }}
-      {{ partial "graduates.html" . }}
+      {{ partial "graduated.html" . }}
     {{ end }}
   </div>
 </div>
