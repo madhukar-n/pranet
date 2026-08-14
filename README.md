@@ -25,5 +25,9 @@ Delete the ```/public``` and run hugo server to generate new ```/public``` direc
 
 
 
-
-
+# Things to do
+- Add gallery
+- Add past people before 2023
+- Add current research works
+- Link for "View more" isn't directing anything, look into it
+- Add news 
