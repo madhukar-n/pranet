@@ -60,6 +60,12 @@ googleFonts = true
   weight = 4
 
   [[menu.main]]
+  identifier = "gallery"
+  name = "Gallery"
+  url = "/gallery/"
+  weight = 5
+
+  [[menu.main]]
   identifier = "home"
   name = "Home"
   url = "/"

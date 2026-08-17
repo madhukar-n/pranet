@@ -1,0 +1,63 @@
+{{ define "meta_tags" }}
+<meta property="og:site_name" content="{{ .Site.Title }}" />
+<meta property="og:title" content="{{ .Title }} | {{ .Site.Title }}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta name="twitter:card" content="summary_large_image">
+<meta property="twitter:title" content="{{ .Title }}">
+
+{{ if .Params.image }}
+{{ with .Params.image }}
+<meta property="og:image" content="{{ . | absURL }}">
+{{ end }}
+{{ else }}
+<meta property="og:image" content="{{ .Site.Params.homepage_meta_tags.meta_og_image | absURL }}">
+{{ end }}
+
+{{- if .Description }}
+<meta name="description" content="{{ .Description }}" />
+<meta property="og:description" content="{{ .Description }}" />
+<meta property="twitter:description" content="{{ .Description }}" />
+{{- else if .Summary }}
+<meta name="description" content="{{ .Summary }}" />
+<meta property="og:description" content="{{ .Summary }}" />
+<meta property="twitter:description" content="{{ .Summary }}" />
+{{- else if .Site.Params.description }}
+<meta name="description" content="{{ .Site.Params.description }}" />
+<meta property="og:description" content="{{ .Site.Params.description }}" />
+<meta property="twitter:description" content="{{ .Site.Params.description }}" />
+{{- end }}
+{{ end }}
+
+{{ define "main" }}
+{{ $entries := .Site.Data.gallery.gallery | default slice }}
+
+<div class="mx-auto mt-6 mb-10 max-w-7xl px-4 sm:px-6 lg:px-8">
+  <section class="px-6 py-6 md:px-10 md:py-10">
+    <h1 class="section-title mt-2 text-4xl md:text-5xl">{{ .Title }}</h1>
+    <div class="content prose prose-lg mt-5 max-w-none">
+      {{ .Content }}
+    </div>
+
+    {{ if gt (len $entries) 0 }}
+    <div class="gallery-grid">
+      {{ range $entries }}
+      {{ $item := . }}
+      <figure class="gallery-item">
+        {{ with $item.src }}
+        <img src="{{ . | safeURL }}" alt="{{ $item.alt | default "Gallery image" }}" loading="lazy" />
+        {{ end }}
+        {{ with $item.caption }}
+        <figcaption>{{ . }}</figcaption>
+        {{ end }}
+      </figure>
+      {{ end }}
+    </div>
+    {{ else }}
+    <div class="mt-10 rounded-[1.25rem] border border-dashed border-slate-300 bg-slate-50 p-6 text-slate-600">
+      Add entries to <code>data/gallery.toml</code> using <code>src</code>, <code>alt</code>, and <code>caption</code>.
+    </div>
+    {{ end }}
+  </section>
+</div>
+{{ end }}

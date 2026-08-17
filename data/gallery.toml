@@ -1,0 +1,21 @@
+# Example entry shape:
+# [[gallery]]
+# src = "/img/slide/slide1.webp"
+# alt = "Lab event activity"
+# caption = "Short description of the image"
+
+[[gallery]]
+src = "/img/gallery/Image-1.webp"
+alt = "Lab event activity 1"
+caption = "Team dinner with exchange students"
+
+[[gallery]]
+src = "/img/gallery/Image-2.webp"
+alt = "Lab event activity 2"
+caption = "Japan's Ambassador to India, H.E. Mr. Ono Keiichi's visit to the lab"
+
+[[gallery]]
+src = "/img/gallery/Image-3.webp"
+alt = "Lab event activity 3"
+caption = "Lab party/dinner with team members and collaborators"
+
