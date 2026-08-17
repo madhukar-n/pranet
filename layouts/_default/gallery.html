@@ -45,7 +45,7 @@
       {{ $item := . }}
       <figure class="gallery-item">
         {{ with $item.src }}
-        <img src="{{ . | safeURL }}" alt="{{ $item.alt | default "Gallery image" }}" loading="lazy" />
+        <img src="{{ . | relURL | safeURL }}" alt="{{ $item.alt | default "Gallery image" }}" loading="lazy" />
         {{ end }}
         {{ with $item.caption }}
         <figcaption>{{ . }}</figcaption>
