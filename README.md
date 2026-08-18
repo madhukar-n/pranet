@@ -26,8 +26,8 @@ Delete the ```/public``` and run hugo server to generate new ```/public``` direc
 
 
 # Things to do
-- Add gallery
-- Add past people before 2023
-- Add current research works
-- Link for "View more" isn't directing anything, look into it
-- Add news 
+- Add past people before 2023.
+- Make the logo transparent and make it visible.
+- Make the website mobile friendly 
+  - List two members in a row in mobile version.
+  - Make the home page better.
