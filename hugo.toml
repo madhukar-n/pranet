@@ -48,22 +48,10 @@ googleFonts = true
   weight = 3
 
   [[menu.main]]
-  identifier = "research"
-  name = "Research"
-  url = "/research/"
-  weight = 2
-
-  [[menu.main]]
   identifier = "pubs"
   name = "Publications"
   url = "/publications/"
   weight = 4
-
-  [[menu.main]]
-  identifier = "gallery"
-  name = "Gallery"
-  url = "/gallery/"
-  weight = 5
 
   [[menu.main]]
   identifier = "home"
